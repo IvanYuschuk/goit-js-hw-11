@@ -1,4 +1,4 @@
-import { createGallery, showLoader, hideLoader } from "./render-functions";
+import { createGallery, showLoader, hideLoader } from "./render-functions.js";
 
 import axios from 'axios';
 

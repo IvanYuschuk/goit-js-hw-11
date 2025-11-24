@@ -3,8 +3,8 @@
 
 
 
-import { getImagesByQuery } from "/js/pixabay-api";
-import { clearGallery } from "/js/render-functions";
+import { getImagesByQuery } from "./js/pixabay-api.js";
+import { clearGallery } from "./js/render-functions.js";
 
 const form = document.querySelector(".form");
 const btn = document.querySelector("button");
