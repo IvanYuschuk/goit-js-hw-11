@@ -38,13 +38,11 @@ export function createGallery(images) {
     ulElem.insertAdjacentHTML('beforeend', markup);
 
     if (!galleryLightbox) {
-        // Якщо галерея ще не створена — ініціалізуємо її
         galleryLightbox = new SimpleLightbox('.gallery a', {
-            captionsData: 'alt', // брати опис з атрибута alt
-            captionDelay: 250,   // затримка появи підпису
+            captionsData: 'alt', 
+            captionDelay: 250,  
         });
     } else {
-        // Якщо галерея вже існує — просто оновлюємо її (щоб вона "побачила" нові картинки)
         galleryLightbox.refresh();
     }
 }
@@ -56,13 +54,12 @@ export function clearGallery() {
     }
 }
 
-// Приклад реалізації (додайте це в свій файл, якщо немає)
 export function showLoader() {
     const loader = document.querySelector('.loader');
-    if(loader) loader.style.display = 'block'; // або loader.classList.remove('is-hidden')
+    if(loader) loader.style.display = 'block'; 
 }
 
 export function hideLoader() {
     const loader = document.querySelector('.loader');
-    if(loader) loader.style.display = 'none'; // або loader.classList.add('is-hidden')
+    if(loader) loader.style.display = 'none'; 
 }
