@@ -55,11 +55,12 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-    const loader = document.querySelector('.loader');
-    if(loader) loader.style.display = 'block'; 
+    const loader = document.querySelector('.js-loader');
+    loader.classList.add("loader");
+    console.log(loader);
 }
 
 export function hideLoader() {
-    const loader = document.querySelector('.loader');
-    if(loader) loader.style.display = 'none'; 
+    const loader = document.querySelector('.js-loader');
+    loader.classList.remove("loader");
 }
