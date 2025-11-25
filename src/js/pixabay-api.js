@@ -18,7 +18,9 @@ export function getImagesByQuery(query) {
             safesearch: true,
         },
         timeout: 3000,
-    })
+    }).then(response => {
+        return response.data; 
+    });
 }
 
 

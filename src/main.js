@@ -16,8 +16,8 @@ form.addEventListener('submit', (e) => {
     }
     const query = document.querySelector("input").value.trim();
     showLoader();
-    getImagesByQuery(query).then(response => {
-        if (response.data.hits.length === 0) {
+    getImagesByQuery(query).then(data => {
+        if (data.hits.length === 0) {
             iziToast.error({
                 message: 'Sorry, there are no images matching your search query. Please try again!',
                 position: 'topRight',
@@ -25,7 +25,7 @@ form.addEventListener('submit', (e) => {
             return; 
         }
 
-        createGallery(response.data.hits);
+        createGallery(data.hits);
     })
     .catch((error) => { 
         console.error(error);
